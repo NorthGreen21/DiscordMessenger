@@ -7,8 +7,13 @@
 
 module.exports = class DiscordMessenger {
     start() {
-        console.log("Hello world!");
+        var button = document.createElement('button');
+        button.setAttribute('id', "messenger");
+        var location = document.getElementsByClassName('listItem-3SmSlK')[0];
+        location.insertAdjacentElement('afterend', button);
     }
 
-    stop() {}
+    stop() {
+        document.getElementById("messenger").remove();
+    }
 }
